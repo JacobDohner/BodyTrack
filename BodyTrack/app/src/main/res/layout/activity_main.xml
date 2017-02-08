@@ -10,12 +10,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.dohner.bodytrack.MainActivity">
 
-    <TextView
-        android:text="Enter Current Weight"
+    <Button
+        android:text="Save Weight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/currentWeightLabel"
-        android:layout_alignParentTop="true"
+        android:id="@+id/saveCurrentWeightButton"
+        android:layout_below="@+id/currentWeightText"
         android:layout_alignParentStart="true" />
 
     <EditText
@@ -25,15 +25,48 @@
         android:text=""
         android:ems="10"
         android:id="@+id/currentWeightText"
-        android:layout_below="@+id/currentWeightLabel"
+        android:layout_centerVertical="true"
         android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/currentWeightLabel" />
+        android:layout_alignEnd="@+id/saveCurrentWeightButton" />
 
-    <Button
-        android:text="Save Weight"
+    <TextView
+        android:text="Enter Current Weight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/saveCurrentWeightButton"
-        android:layout_below="@+id/currentWeightText"
+        android:id="@+id/currentWeightLabel"
+        android:layout_above="@+id/currentWeightText"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Today's Weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weightToday"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Previous Weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weightPrevious"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/currentWeightText" />
+
+    <TextView
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weightPrevious"
+        android:layout_toEndOf="@+id/currentWeightLabel"
+        android:id="@+id/weightPreviousLabel" />
+
+    <TextView
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:id="@+id/weightTodayLabel"
+        android:layout_below="@+id/weightToday"
         android:layout_alignParentStart="true" />
 </RelativeLayout>
